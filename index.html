@@ -30,53 +30,66 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">EDA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Visualizations</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Model and Results</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#data">Data</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Visualizations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Story</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead" id="services">
             <div class="container">
                 <!--<div class="masthead-subheading">Welcome to Our Studio!</div>-->
-                <div class="masthead-heading text-uppercase">Diabetes Detection</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+                <div style="padding-left: 60rem" class="masthead-heading text-uppercase">Diabetes Detection</div>
+                
+                <a style="float:right" class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+                <br>
+                <br>
+                <br>
+                <br>
+
             </div>
+          <div style="padding-left: 70rem" class="portfolio-caption-subheading text-bold">Our goal is to be able to predict whether a person has diabetes or not. The user will fill out a few questions about themselves, such as blood pressure and BMI, and our product will take that input and predict whether that person is diabetic or not.</div>
         </header>
         <!-- Data-->
         <section class="page-section" id="data">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Data</h2>
-                    <h3 class="section-subheading text-muted">What is our model is based on?</h3>
+                    <h3 ><a href="https://www.kaggle.com/datasets/mathchi/diabetes-data-set">Go to our data set here</a>
+</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Origanal Set</h4>
-                        <p class="text-muted">We used a set from Kaggle which gave us raw data that had eight inputs with a single output.</p>
+                            <!--<i class="fas fa-circle fa-stack-2x text-primary"></i>-->
+                            <!--<i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>-->
+                            <img src="assets/data.png"
+                                 width="140" 
+                                 height="140"/>  
+                      </span>
+                        <h4 class="my-3">Original Set</h4>
+                        <p class="text-muted">We used a data set from Kaggle that included 8 independent features and 1 dependent feature. The outcome was dependent on pregnancies, BMI, glucose, blood pressure, skin thickness, age, insulin, and diabetes pedigree.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                            <img src="assets/clean.png"
+                                 width="175" 
+                                 height="175"/>
                         </span>
                         <h4 class="my-3">Cleaning Data</h4>
-                        <p class="text-muted">We used many tools to verify that our data was perfect with no missing or null values.</p>
+                        <p class="text-muted">The data set did not initially contain any missing values. However, some of the independent features had zero values, which made no sense. If one's blood pressure was 0, how could they be alive? We therefore changed all of those zero values to null values. Then, we replaced those null values with the mean of that certain feature to have a more accurate data set.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                            <img src="assets/finish.png"
+                                 width="150" 
+                                 height="150"/>
                         </span>
                         <h4 class="my-3">Final Data</h4>
-                        <p class="text-muted">We were left with a polished data set that would give us the best and most accurate model.</p>
+                        <p class="text-muted">Once our data was cleaned, we were left with a more realistic and accurate data set that we could then input into our machine learning model.</p>
                     </div>
                 </div>
             </div>
@@ -93,9 +106,6 @@
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
                                 <iframe width="400" height="500" src="null_values.html" title="Missing Values"></iframe>
 
                             </a>
@@ -109,13 +119,10 @@
                         <!-- Portfolio item 2-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
                                 <iframe width="400" height="500" src="pie_chart_values.html" title="Missing Values"></iframe>
                             </a>
                             <div class="portfolio-caption">
-                              <div class="portfolio-caption-heading">Pie Chart</div>
+                              <div class="portfolio-caption-heading">Donut Chart</div>
                                 <div class="portfolio-caption-subheading text-muted">This chart tells us the percentage of healthy people versus diabetic people. </div>
                             </div>
                         </div>
@@ -124,14 +131,11 @@
                         <!-- Portfolio item 3-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <iframe width="400" height="500" src="heat_map_values.html" title="Missing Values"></iframe>
+                                <iframe width="480" height="500" src="heat_map_values.html" title="Missing Values"></iframe>
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Heat Map</div>
-                                <div class="portfolio-caption-subheading text-muted">A heat map describes how each feature within the data set correlates with each other. This allows us to determine which features are more likely to affect one another.  </div>
+                                <div class="portfolio-caption-subheading text-muted">A heat map describes how each feature within the data set correlates with each other.   </div>
                             </div>
                         </div>
                     </div>
@@ -139,9 +143,6 @@
                         <!-- Portfolio item 4-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
                                 <iframe width="400" height="500" src="glucose_outcome_distplot.html" title="Missing Values"></iframe>
                             </a>
                             <div class="portfolio-caption">
@@ -154,14 +155,11 @@
                         <!-- Portfolio item 5-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <iframe width="400" height="500" src="model_accuracy.html" title="Missing Values"></iframe>
+                                <iframe width="450" height="500" src="model_accuracy_1.html" title="Missing Values"></iframe>
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Model Accuracy Graph</div>
-                                <div class="portfolio-caption-subheading text-muted">Accuracy focuses on eliminating false negatives and false positives in a model. This graph shows the accuracy of all the machine learning models we tested on our diabetes data set.</div>
+                                <div class="portfolio-caption-subheading text-muted">This graph shows the accuracy of all the machine learning models we tested on our diabetes data set.</div>
                             </div>
                         </div>
                     </div>
@@ -169,14 +167,11 @@
                         <!-- Portfolio item 6-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <iframe width="400" height="500" src="model_recall.html" title="Missing Values"></iframe>
+                                <iframe width="450" height="500" src="model_recall_1.html" title="Missing Values"></iframe>
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Model Recall Graph</div>
-                                <div class="portfolio-caption-subheading text-muted">Recall places an emphasis on eliminating false negatives. This is important in the health sector as false negatives can potentially be fatal. This graph compares the recall values of each of the machine learning models we tested. </div>
+                                <div class="portfolio-caption-subheading text-muted">Recall focuses on eliminating false negatives. This graph compares the recall values of each of the models we tested. </div>
                             </div>
                         </div>
                     </div>
@@ -187,70 +182,62 @@
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Model Results and Insights</h2>
-                    <h3 class="section-subheading text-muted">This section shows the results from the models, and what we can infer from the results</h3>
+                    <h2 class="section-heading text-uppercase">Story</h2>
+                    <h3 class="section-subheading text-muted">This section shows the history of the whole process, from choosing the data set to figuring out the best machine learning model for the data set.</h3>
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid"/></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>The Beginning</h4>
-                                <h4 class="subheading">Why we chose Diabetes</h4>
+                                <h4>The Beginning:</h4>
+                                <h4 class="subheading">Why We Chose Diabetes</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">We chose to do our research on Diabetes because we believed that diabetes is a serious topic, and more light needs to be shined on diabetes.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Diabetes affects more than 463 million people in the world. 37.3 million of them are Americans. Even though approximately 1 in 10 Americans have diabetes, 1 in 5 of them don't even know they have it. Thus, the purpose of our research is to be able to predict whether someone is truly healthy or is diabetic. </p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>Diving deeper</h4>
+                                <h4>Diving Deeper:</h4>
                                 <h4 class="subheading">Data</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">During our research for diabetes, we discovered data that included Pregnancies, Glucose, Blood pressure, Skin thickness, Insulin, BMI, Age, Diabetes pedigree function, and the outcome of the data. </p></div>
+                            <div class="timeline-body"><p class="text-muted">The data set chosen included information that could affect the outcome of diabetes, such as: pregnancies, glucose, blood pressure, skin thickness, insulin, BMI, age, and diabetes pedigree function.  </p></div>
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                            <h4>Making Connections</h4>
-                                <h4 class="subheading">Correlation within the Data</h4>
+                            <h4>Making Connections:</h4>
+                                <h4 class="subheading">Correlation Within the Data</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Once we had the data, we decided to put the data into different graphs to show a correlation in the data set. We discovered that there was pattern between Insulin and developing diabetes. However, we found that there wasn't a correlation between BMI, blood pressure, and pregnancies with developing diabetes.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Once the data set was finalized, we plotted the data in various graphs to make a connection between the data points. One interesting fact we discovered was that some of the features didn't affect the outcome of diabetes - such as skin thickness, insulin, and blood pressure. However, other features - such as glucose and BMI - did affect the outcome. </p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid"/></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>KNN Model</h4>
-                                <h4 class="subheading">AUC_ROC Score</h4>
+                                <h4>Modeling the Data:</h4>
+                                <h4 class="subheading">Machine Learning Models</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">The AUC and ROC score rating of the KNN model is .85. AUC is the measure of seperability. The ROC is the probability curve. The KNN model had the highest AUC and ROC score compared to all the other models we used.</p></div>
+                            <div class="timeline-body"><p class="text-muted">We decided to use 4 machine learning models to help analyze/predict outcomes using data from the diabetes data set. We used Random Forest, KNN, Neural Networks, and SVM. The KNN model was the best, as it had a reasonable computation time and provided the best results. So, we chose the KNN model as our main model.</p></div>
                           </div>
                     </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                     <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid"/></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>KNN Model</h4>
-                                <h4 class="subheading">Precision</h4>
+                           <h4>KNN Model:</h4>
+                                <h4 class="subheading">Results</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">The precision of the KNN model is 83.18%. This means that the times we executed the code, it was 83.18% similar. The KNN model had the highest Precision rating than any other model we used.  </p></div>
+                            <div class="timeline-body"><p class="text-muted">The KNN model had the highest scores for every main category we were looking at: accuracy, precision, and recall. The KNN model had an accuracy rating of 81.17%, a precision rating of 83.18%, and a recall value of 85.58%. All of those ratings were the best of all the models we tested.   </p></div>
+     
                           </div>
                     </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>KNN Model</h4>
-                                <h4 class="subheading">Precision</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">The precision of the KNN model is 83.18%. This means that the times we executed the code, it was 83.18% similar. The KNN model had the highest Precision rating than any other model we used.  </p></div>
-                        </div>
-                    </li>
+
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
@@ -270,49 +257,49 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Team .</h3>
+                    <h3 class="section-subheading text-muted">Here is the team that made it all possible.</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/Sahitha.jpeg" alt="..." />
                             <h4>Sahitha Chunduru</h4>
-                            <p class="text-muted">Lead Designer</p>
+                            
                             
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/Daniel.jpeg" alt="..." />
                             <h4>Daniel Trinh</h4>
-                            <p class="text-muted">Lead Marketer</p>
+                            <p class="text-muted"></p>
                             
                         </div>
                     </div>
                   
                   <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/Pujan.jpeg" alt="..." />
                             <h4>Pujan Patel</h4>
-                            <p class="text-muted">Lead Marketer</p>
+                            <p class="text-muted"></p>
                             
                         </div>
                     </div>
                   
                   <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/Yaolin.jpeg" alt="..." />
                             <h4>Yaolin Liu</h4>
-                            <p class="text-muted">Lead Marketer</p>
+                            <p class="text-muted">16 year old Sophomore</p>
                             
                         </div>
                     </div>
                   
                   <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/Yash.jpeg" alt="..." />
                             <h4>Yash Patel</h4>
-                            <p class="text-muted">Lead Marketer</p>
+                            <p class="text-muted"></p>
                             
                         </div>
                     </div>
@@ -320,15 +307,16 @@
                   
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/Jorge.jpeg
+" alt="..." />
                             <h4>Jorge Morones</h4>
-                            <p class="text-muted">Lead Developer</p>
+                            <p class="text-muted"> A cadet in Navy Junior Reserve Officer Training Crops. Rank C/P03</p>
                             
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Add some description here </p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"> </p></div>
                 </div>
             </div>
         </section>
@@ -339,9 +327,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2022</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/aicampdotorg/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/company/ai-camp/mycompany/verification/" aria-label="LinkedIn"><i class="fab fa-linkedin-in">J</i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
